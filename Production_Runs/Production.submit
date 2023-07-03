@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -A UCUB0089
+#PBS -q economy
+#PBS -N RBM 
+#PBS -l walltime=8:00:00
+#PBS -o /glade/u/home/dblaskey/logs/Production_run.out
+#PBS -e /glade/u/home/dblaskey/logs/Production_run.err
+#PBS -l select=1:ncpus=36:mpiprocs=36
+
+source activate /glade/u/home/dblaskey/miniconda3/envs/py3
+
+python /glade/u/home/dblaskey/RBM/Production_Runs/Production.py
+
+
+
