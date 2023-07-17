@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#PBS -A UCUB0089
+#PBS -q regular 
+#PBS -N RBM_in
+#PBS -l walltime=9:00:00
+#PBS -e /glade/u/home/dblaskey/logs/RBM_in.err
+#PBS -o /glade/u/home/dblaskey/logs/RBM_in.out
+#PBS -l select=1:ncpus=36:mpiprocs=36
+
+source activate /glade/u/home/dblaskey/miniconda3/envs/py3
+
+python /glade/u/home/dblaskey/RBM/Optimization/RBM_preprocess.py
+
+# python /glade/u/home/dblaskey/RBM/Functions/generate_RBM_input_files_hru_annual.py /glade/u/home/dblaskey/RBM/Control/prepare_rbm.cfg
+
+

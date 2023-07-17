@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -A UCUB0089
+#PBS -q regular
+#PBS -N RBM1 
+#PBS -l walltime=0:50:00
+#PBS -o /glade/u/home/dblaskey/logs/RBM1_run.out
+#PBS -e /glade/u/home/dblaskey/logs/RBM1_run.err
+#PBS -l select=1:ncpus=36:mpiprocs=36
+
+source activate /glade/u/home/dblaskey/miniconda3/envs/py3
+
+python /glade/u/home/dblaskey/RBM/Optimization/RBM_run.py
+
+
